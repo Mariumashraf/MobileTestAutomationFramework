@@ -1,4 +1,6 @@
 package com.qacart.screens;
 
-public class TasksScreen {
+import com.qacart.base.Base;
+
+public class TasksScreen extends Base {
 }

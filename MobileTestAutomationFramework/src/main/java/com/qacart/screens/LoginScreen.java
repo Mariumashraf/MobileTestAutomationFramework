@@ -14,11 +14,30 @@ public class LoginScreen extends Base {
 
     @AndroidFindBy (xpath = "//*[@text='Login']")
     private MobileElement loginBtn;
+    @AndroidFindBy (xpath = "//*[@text='Signup']")
+    private MobileElement signupBtn;
 
-    public void fillEmailAndPassword(String email, String password){
+    public void performLogin(String email, String password){
         emailField.sendKeys(email);
         passwordField.sendKeys(password);
+        loginBtn.click();
     }
+
+    public void performLoginWithoutEmail(String password){
+        passwordField.sendKeys(password);
+        loginBtn.click();
+    }
+
+    public void performLoginWithoutPassword(String email){
+        emailField.sendKeys(email);
+        loginBtn.click();
+    }
+
+    public void clickOnSignup(){
+        signupBtn.click();
+    }
+
+
 
 
 }
